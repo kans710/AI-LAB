@@ -1,0 +1,1 @@
+# This repository collects all the projects done under the Artificial Intelligence Lab in semester 5, Btech.
