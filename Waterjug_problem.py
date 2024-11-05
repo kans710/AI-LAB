@@ -2,7 +2,8 @@ class Node:
     def __init__(self, state, parent, action):
         self.state = state        # Tuple (x, y)
         self.parent = parent      # Parent Node
-        self.action = action      # Action taken to reach this state
+        self.action = action      # Action taken to reach this state 
+        
 
 class Stack_Frontier:
     def __init__(self):
