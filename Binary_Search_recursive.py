@@ -22,7 +22,7 @@ def initial_Setup():
     if result == -1:
         print("unfortunately the element is not found in the given array :(")
     else:
-        print(f"element founded at {result} position")
+        print(f"element founded at {result+1} position")
     
     
 if __name__ == "__main__":
