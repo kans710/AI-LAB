@@ -69,7 +69,7 @@ def bfs(graph, start_state, goal_state):
 
         # Expand the current node's neighbors
         for action, neighbor in graph[current_state]:
-            if neighbor not in visited and not frontier.state_contained(neighbor):
+            if neighbor not in visited and not frontier.contains_state(neighbor):
                 child = Node(state=neighbor, parent=current_node, action=action)
                 frontier.add(child)
 

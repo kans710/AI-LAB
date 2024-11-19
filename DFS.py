@@ -27,15 +27,7 @@ class StackFrontier():
             return node
 
 
-class QueueFrontier(StackFrontier):
 
-    def remove(self):
-        if self.empty():
-            raise Exception("empty frontier")
-        else:
-            node = self.frontier[0]
-            self.frontier = self.frontier[1:]
-            return node
 def dfs(graph, start_state, goal_state):
     # Initialize the frontier with the starting node
     start_node = Node(state=start_state, parent=None, action=None)
@@ -69,7 +61,7 @@ def dfs(graph, start_state, goal_state):
 
         # Expand the current node's neighbors
         for action, neighbor in graph[current_state]:
-            if neighbor not in visited and not frontier.state_contained(neighbor):
+            if neighbor not in visited and not frontier.contains_state(neighbor):
                 child = Node(state=neighbor, parent=current_node, action=action)
                 frontier.add(child)
 
@@ -93,3 +85,4 @@ if result:
     print("Actions taken:", actions)
 else:
     print("No solution found.")
+print("Karan Singh Ghugtyal , 2202301530023")
